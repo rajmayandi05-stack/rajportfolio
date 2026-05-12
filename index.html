@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAJ — Video Editor & Visual Storyteller</title>
+    <meta name="description"
+        content="Video editor and visual storyteller crafting compelling reels, short films, and brand content. Explore Raj's portfolio of cinematic editing.">
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@200;400;700;800;900&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <!-- Floating Ambient Orbs -->
+    <div class="floating-orb orb-1"></div>
+    <div class="floating-orb orb-2"></div>
+    <div class="floating-orb orb-3"></div>
+
+    <!-- Particles Canvas -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader-content">
+            <h1 class="loader-name">RAJ</h1>
+            <div class="loader-bar">
+                <div class="loader-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fixed Header -->
+    <header id="site-header">
+        <div class="header-logo">
+            <a href="#hero" class="logo-link">RAJ</a>
+        </div>
+        <nav class="header-nav">
+            <a href="#portfolio" class="nav-link" data-filter="all">PORTFOLIO</a>
+            <span class="nav-divider">/</span>
+            <a href="#portfolio" class="nav-link" data-filter="reels">REELS</a>
+            <span class="nav-divider">/</span>
+            <a href="#portfolio" class="nav-link" data-filter="brand">BRAND</a>
+            <span class="nav-divider">/</span>
+            <a href="#about" class="nav-link">ABOUT</a>
+            <span class="nav-divider">/</span>
+            <a href="#contact" class="nav-link">CONTACT</a>
+        </nav>
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-btn" aria-label="Toggle Menu">
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+        </button>
+    </header>
+
+    <!-- Mobile Nav Overlay -->
+    <div id="mobile-nav-overlay">
+        <nav class="mobile-nav-links">
+            <a href="#hero" class="mobile-nav-link">HOME</a>
+            <a href="#portfolio" class="mobile-nav-link">PORTFOLIO</a>
+            <a href="#about" class="mobile-nav-link">ABOUT</a>
+            <a href="#contact" class="mobile-nav-link">CONTACT</a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content">
+
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-bg-wrapper">
+                <img src="Artboard 2.jpg" alt="Raj - Video Editor" class="hero-bg-image">
+                <div class="hero-overlay"></div>
+            </div>
+
+            <div class="hero-name-container">
+                <h1 class="hero-massive-name">RAJ</h1>
+            </div>
+
+            <div class="hero-tagline">
+                <p>UNLEASHING THE POWER OF STORYTELLING</p>
+                <p>THROUGH CINEMATIC EDITS & VISUAL EXPERIENCES</p>
+            </div>
+
+            <div class="hero-scroll-indicator">
+                <span>SCROLL</span>
+                <div class="scroll-arrow">
+                    <i data-lucide="chevron-down"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio">
+            <div class="portfolio-header">
+                <h2 class="section-title">SELECTED WORKS</h2>
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">ALL</button>
+                    <span class="filter-divider">/</span>
+                    <button class="filter-btn" data-filter="reels">REELS</button>
+                    <span class="filter-divider">/</span>
+                    <button class="filter-btn" data-filter="brand">BRAND</button>
+                    <span class="filter-divider">/</span>
+                    <button class="filter-btn" data-filter="shortfilm">SHORT FILMS</button>
+                </div>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- Item 1 — Book Fair Reel -->
+                <div class="portfolio-item" data-category="reels">
+                    <div class="item-media">
+                        <video class="item-video" loop muted playsinline preload="metadata">
+                            <source src="bookfair.mp4" type="video/mp4">
+                        </video>
+                        <div class="item-overlay"></div>
+                    </div>
+                    <div class="item-info">
+                        <span class="item-title">BOOK FAIR — HIGHLIGHT REEL</span>
+                        <span class="item-year">©2025</span>
+                    </div>
+                </div>
+
+                <!-- Item 2 — Entudio Brand Film -->
+                <div class="portfolio-item" data-category="brand">
+                    <div class="item-media">
+                        <video class="item-video" loop muted playsinline preload="metadata">
+                            <source src="Entudio.mp4" type="video/mp4">
+                        </video>
+                        <div class="item-overlay"></div>
+                    </div>
+                    <div class="item-info">
+                        <span class="item-title">ENTUDIO — BRAND FILM</span>
+                        <span class="item-year">©2025</span>
+                    </div>
+                </div>
+
+                <!-- Item 3 — Anbu Builders Reel -->
+                <div class="portfolio-item" data-category="brand">
+                    <div class="item-media">
+                        <video class="item-video" loop muted playsinline preload="metadata">
+                            <source src="anbu buliders reel 4  .mp4" type="video/mp4">
+                        </video>
+                        <div class="item-overlay"></div>
+                    </div>
+                    <div class="item-info">
+                        <span class="item-title">ANBU BUILDERS — REEL</span>
+                        <span class="item-year">©2024</span>
+                    </div>
+                </div>
+
+                <!-- Item 4 — Entudio Teaser -->
+                <div class="portfolio-item" data-category="reels">
+                    <div class="item-media">
+                        <video class="item-video" loop muted playsinline preload="metadata">
+                            <source src="enduio_1.mp4" type="video/mp4">
+                        </video>
+                        <div class="item-overlay"></div>
+                    </div>
+                    <div class="item-info">
+                        <span class="item-title">ENTUDIO — TEASER</span>
+                        <span class="item-year">©2025</span>
+                    </div>
+                </div>
+
+                <!-- Item 5 — Short Film -->
+                <div class="portfolio-item" data-category="shortfilm">
+                    <div class="item-media">
+                        <video class="item-video" loop muted playsinline preload="metadata">
+                            <source src="SHOTFILM OUT ONE .mp4" type="video/mp4">
+                        </video>
+                        <div class="item-overlay"></div>
+                    </div>
+                    <div class="item-info">
+                        <span class="item-title">SHORT FILM — CHAPTER ONE</span>
+                        <span class="item-year">©2025</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="about-bg-wrapper">
+                <img src="Artboard11 2.jpg" alt="About Raj" class="about-bg-image">
+                <div class="about-overlay"></div>
+            </div>
+
+            <div class="about-watermark">R</div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Raj is a passionate video editor who transforms raw footage into cinematic experiences. With a
+                        keen eye for pacing, color, and storytelling, he crafts visuals that resonate.</p>
+                    <p>Specializing in social media reels, brand films, and short-form content, Raj brings a unique
+                        blend of technical precision and creative instinct to every project.</p>
+                    <p>His editing style is bold, rhythmic, and deeply intentional — every cut serves the story, every
+                        transition drives emotion.</p>
+                </div>
+
+                <div class="about-tools">
+                    <span class="tool-item">PREMIERE PRO</span>
+                    <span class="tool-item">AFTER EFFECTS</span>
+                    <span class="tool-item">DAVINCI RESOLVE</span>
+                </div>
+            </div>
+
+            <div class="about-quote">
+                <p>THROUGH THE EDIT SUITE,</p>
+                <p>RAW FOOTAGE BECOMES CINEMA,</p>
+                <p>MOMENTS BECOME STORIES,</p>
+                <p>AND VISION BECOMES REALITY.</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="contact-massive-name">RAJ</div>
+
+            <div class="contact-info-row">
+                <div class="contact-col">
+                    <p class="contact-tagline">TURNING RAW FOOTAGE</p>
+                    <p class="contact-tagline">INTO CINEMATIC EXPERIENCES</p>
+                </div>
+                <div class="contact-col">
+                    <p class="contact-detail">©2026 / ALL RIGHTS RESERVED</p>
+                    <a href="mailto:rajmayandi05@gmail.com" class="contact-detail contact-link-inline">RAJMAYANDI05@GMAIL.COM</a>
+                    <div class="contact-socials-inline">
+                        <a href="https://www.instagram.com/ed.raj_?igsh=aDFvb2doYjd2OGdu" class="contact-detail contact-link-inline">INSTAGRAM</a>
+                        <span class="contact-detail">—</span>
+                        <a href="#" class="contact-detail contact-link-inline">YOUTUBE</a>
+                    </div>
+                </div>
+                <div class="contact-col">
+                    <p class="contact-detail">BASED IN INDIA</p>
+                    <p class="contact-detail">AVAILABLE WORLDWIDE</p>
+                </div>
+            </div>
+
+            <a href="mailto:rajmayandi05@gmail.com" class="send-mail-btn">
+                SEND MAIL <span class="mail-arrow">↗</span>
+            </a>
+
+            <footer class="site-footer">
+                <p>© 2026 RAJ. ALL RIGHTS RESERVED.</p>
+            </footer>
+        </section>
+
+    </main>
+
+    <!-- Bottom Filter Bar (Sticky) -->
+    <div id="bottom-bar">
+        <div class="bottom-bar-filters">
+            <button class="bottom-filter-btn active" data-filter="all">ALL</button>
+            <span class="bottom-divider">/</span>
+            <button class="bottom-filter-btn" data-filter="reels">REELS</button>
+            <span class="bottom-divider">/</span>
+            <button class="bottom-filter-btn" data-filter="brand">BRAND</button>
+            <span class="bottom-divider">/</span>
+            <button class="bottom-filter-btn" data-filter="shortfilm">SHORT FILMS</button>
+        </div>
+        <div class="rec-indicator">
+            <span class="rec-dot"></span>
+            REC
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
